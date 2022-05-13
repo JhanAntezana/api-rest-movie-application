@@ -1,5 +1,278 @@
+:root{
+    --purple-light-1: #FBFAFB;
+    --purple-light-2: #EEEAF2;
+    --purple-medium-1: #AA83C8;
+    --purple-medium-2: #8B48BF;
+    --purple-medium-3: #5C218A;
+    --purple-dark-1: #3E0F64;
+    --purple-dark-2: #2A0646;
+  
+    --yellow: #EECC75;
+    --green: #CAD297;
+    --aqua: #B7EAC5;
+    --lightBlue: #A2EEE5;
+    --darkBlue: #8EA2EA;
+    --red: #F09D9D;
+  
+    --font-family-titles: 'Dosis', sans-serif;
+    --font-family-text: 'Red Hat Display', sans-serif;
+    --font-weight-title1: 700;
+    --font-weight-title2: 800;
+    --font-weight-text1: 400;
+    --font-weight-text2: 500;   
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scrollbar-width: thin;
+}
 
 body{
-    background-color: black;
-    color: white;
+    background-color: var(--purple-light-1);
+    color: var(--purple-dark-2);
+    font-family: var(--font-family-text);
+    font-weight: var(--font-weight-text1);
+    font-size: 16px;
+}
+h1{
+    font-size: 24px;
+    color: var(--purple-dark-2);
+    font-family: var(--font-family-titles);
+    font-weight: var(--font-weight-title2);
+}
+h2{
+    font-size: 18px;
+    color: var(--purple-dark-1);
+    font-family: var(--font-family-titles);
+    font-weight: var(--font-weight-title1);
+}
+h3{
+    font-size: 16px;
+    color: var(--purple-dark-2);
+    font-family: var(--font-family-titles);
+    font-weight: var(--font-weight-text2);
+}
+input{
+    background-color: var(--purple-light-2);
+    color: var(--purple-medium-2);
+    height: 50px;
+    font-size: 18px;
+    padding-left: 16px;
+    border: none;
+}
+input::Placeholder{
+    color: var(--purple-medium-1);
+    font-family: var(--font-family-text);
+}
+button{
+    background-color: var(--purple-dark-1);
+    color: var(--purple-light-2);
+    font-weight: var(--font-weight-text2);
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+}
+/*SHARED*/
+.header-container, .trendingPreview-container, .categories-container, .genericList-container{
+    padding: 0 24px;
+}
+.trendingPreview-container, .categories-container, footer{
+    margin-top: 48px;
+}
+.trendingPreview-header, .categories-title{
+    margin-bottom: 24px;
+}
+.movie-container{
+    cursor: pointer;
+}
+.movie-img{
+    border-radius: 8px;
+    width: 150px;
+    height: 225px;
+}
+.categories-List{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;/*revisar*/
+}
+.category-container{
+    display: flex;
+    width: 128px;
+    height: 30px;
+    align-items: center;
+}
+
+/*HEADER*/
+.header-container{
+    padding-top: 40px;
+}
+/* .header-container--long {
+    background-image: url('https://pics.filmaffinity.com/Deadpool-777527803-large.jpg');
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 19.27%, rgba(0, 0, 0, 0) 29.17%), url(https://pics.filmaffinity.com/Deadpool-777527803-large.jpg);
+    background-size: cover !important;
+    height: 480px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+} 
+.header-container--categoryView {
+  background: linear-gradient(180deg, rgba(238, 204, 117, 0.5) 0%, rgba(238, 204, 117, 0) 72.92%);
+}*/
+.header-title{
+    margin-bottom: 16px;
+}
+.header-arrow{
+    font-weight: var(--font-weight-text2);
+    font-size: 24px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+/* .header-arrow--white {
+    color: var(--purple-light-1);
+} */
+.header-searchForm{
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;/*revisar*/
+    position: relative;
+    /* align-items: center;
+    justify-content: center; */
+}
+.header-searchForm button{
+    width: 56px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    /* height: 48px; */
+}
+.header-searchForm input{
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+/*TRENDING*/
+.trendingPreview-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.trendingPreview-btn{
+    width: 72px;
+    height: 32px;
+    border-radius: 8px;
+}
+.trendingPreview-movieList, .relatedMovies-scrollContainer{
+    display: flex;
+    height: 236px;
+    overflow-x: scroll;
+    /* overscroll-behavior-x: contain; */
+    scroll-snap-type: x proximity;
+    overflow-y: hidden;
+    gap:10px;
+}
+
+.trendingPreview-movieList .movie-img, .relatedMovies-scrollContainer .movie-img{
+    scroll-snap-align: center;
+}
+
+/*CATEGORIES*/
+.category-container {
+    margin: 2px 0;
+}
+.category-container .category-icon{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-right: 10px;
+    color: var(--purple-light-1);
+}
+.category-container .action{
+    background-color: var(--yellow);
+}
+.category-container .adventure{
+    background-color: var(--green);
+}
+.category-container .comedy{
+    background-color: var(--lightBlue);
+}
+.category-container .drama{
+    background-color: var(--darkBlue);
+}
+.category-container .musical{
+    background-color: var(--aqua);
+}
+.category-container .romance{
+    background-color: var(--red);
+}
+
+/*GENERIC LIST (search, treanding & category)*/
+.genericList-container{
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+.genericList-container .movie-img{
+    height: 194px;
+    width: 130px;
+}
+
+/*MOVIE DETAILS*/
+.movieDetails-container{
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    padding: 32px 24px;
+    margin-top: 403px;
+    z-index: 10;
+    /* position: absolute; */
+    background-color: var(--purple-light-1);
+}
+.movieDetails-container .moveiDetail-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.movieDetails-container .movieDetail-title{
+    display: inline-block;
+}
+.movieDetails-container .movieDetail-score{
+    display: inline-block;
+    align-items: center;
+    color: var(--yellow);
+}
+.movieDetails-container .movieDetail-score p{
+    display: inline-block;
+    padding: 0 5px;
+    color: var(--purple-dark-2);
+}
+.movieDetails-container .movieDetail-description{
+    margin: 24px 0;
+}
+.movieDetails-container .categories-List{
+    margin-bottom: 24px;
+}
+.movieDetails-container .relatedMovies-container .relatedMovies-title{
+    margin-bottom: 16px;
+}
+
+footer{
+    background-color: var(--purple-medium-3);
+    color: var(--purple-light-2);
+    padding: 20px;
+}
+
+.inactive{
+    display: none;
 }
