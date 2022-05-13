@@ -1,16 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API-REST</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700;800&family=Red+Hat+Display:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../styles/style.css">
+
+    <title>API-REST</title>
+    <script src="https://kit.fontawesome.com/a84076161c.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <header id="header-main" class="header-container">
+        <span class="header-arrow inactive"><i class="fa-solid fa-angle-left"></i></span>
+        <h1 class="header-title">JRMovies</h1>
+        <h1 class="header-title header-title--categoryView inactive">Acción</h1>
+        <form action="" id="searchForm" class="header-searchForm">
+            <input type="search" placeholder="Nombre de la pelicula">
+            <button class="lens-header"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </header>
+   
     
 
-
+    <script src="../js/secrets.js"></script>
     <script src="../js/main.js"></script>
 </body>
 </html>
