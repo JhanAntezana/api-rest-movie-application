@@ -25,7 +25,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    scrollbar-width: thin;
 }
 
 body{
@@ -34,6 +33,7 @@ body{
     font-family: var(--font-family-text);
     font-weight: var(--font-weight-text1);
     font-size: 16px;
+    min-height: 100vh;
 }
 h1{
     font-size: 24px;
@@ -60,6 +60,7 @@ input{
     font-size: 18px;
     padding-left: 16px;
     border: none;
+    outline: 0;
 }
 input::Placeholder{
     color: var(--purple-medium-1);
@@ -112,7 +113,7 @@ ul{
 .header-container{
     padding-top: 40px;
 }
-/* .header-container--long {
+.header-container--long {
     background-image: url('https://pics.filmaffinity.com/Deadpool-777527803-large.jpg');
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 19.27%, rgba(0, 0, 0, 0) 29.17%), url(https://pics.filmaffinity.com/Deadpool-777527803-large.jpg);
     background-size: cover !important;
@@ -123,7 +124,7 @@ ul{
 } 
 .header-container--categoryView {
   background: linear-gradient(180deg, rgba(238, 204, 117, 0.5) 0%, rgba(238, 204, 117, 0) 72.92%);
-}*/
+}
 .header-title{
     margin-bottom: 16px;
 }
@@ -134,9 +135,9 @@ ul{
     cursor: pointer;
     display: inline-block;
 }
-/* .header-arrow--white {
+.header-arrow--white {
     color: var(--purple-light-1);
-} */
+}
 .header-searchForm{
     display: flex;
     width: 100%;
@@ -162,6 +163,7 @@ ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 .trendingPreview-btn{
     width: 72px;
@@ -176,6 +178,9 @@ ul{
     scroll-snap-type: x proximity;
     overflow-y: hidden;
     gap:10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .trendingPreview-movieList .movie-img, .relatedMovies-scrollContainer .movie-img{
@@ -196,24 +201,43 @@ ul{
     margin-right: 10px;
     color: var(--purple-light-1);
 }
-.category-container .action{
+/* .category-container .Action{
     background-color: var(--yellow);
 }
-.category-container .adventure{
+.category-container .Adventure{
     background-color: var(--green);
 }
-.category-container .comedy{
+.category-container .Comedy{
     background-color: var(--lightBlue);
 }
-.category-container .drama{
+.category-container .Drama{
     background-color: var(--darkBlue);
 }
-.category-container .musical{
+.category-container .Music{
     background-color: var(--aqua);
 }
-.category-container .romance{
+.category-container .Romance{
     background-color: var(--red);
-}
+} */
+#id28 { background-color: var(--yellow); }
+#id12 { background-color: var(--red); }
+#id16 { background-color: var(--green); }
+#id35 { background-color: var(--lightBlue); }
+#id80 { background-color: var(--darkBlue); }
+#id99 { background-color: var(--purple-dark-1); }
+#id18 { background-color: var(--purple-medium-1); }
+#id10751 { background-color: var(--yellow); }
+#id14 { background-color: var(--red); }
+#id36 { background-color: var(--green); }
+#id27 { background-color: var(--lightBlue); }
+#id10402 { background-color: var(--darkBlue); }
+#id9648 { background-color: var(--purple-dark-1); }
+#id10749 { background-color: var(--purple-medium-1); }
+#id878 { background-color: var(--yellow); }
+#id10770 { background-color: var(--red); }
+#id53 { background-color: var(--green); }
+#id10752 { background-color: var(--lightBlue); }
+#id37 { background-color: var(--darkBlue); }
 
 /*GENERIC LIST (search, treanding & category)*/
 .genericList-container{
@@ -271,8 +295,10 @@ footer{
     background-color: var(--purple-medium-3);
     color: var(--purple-light-2);
     padding: 20px;
-}
-
+    width: 100%;
+    text-align: center;
+} 
 .inactive{
     display: none;
 }
+
