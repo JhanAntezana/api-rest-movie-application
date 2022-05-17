@@ -121,6 +121,7 @@ ul{
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: -1;
 } 
 .header-container--categoryView {
   background: linear-gradient(180deg, rgba(238, 204, 117, 0.5) 0%, rgba(238, 204, 117, 0) 72.92%);
