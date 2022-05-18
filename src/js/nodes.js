@@ -19,7 +19,7 @@ const headerTitle = document.querySelector('#header-main .header-title');
 const headerTitleCategoryView = document.querySelector('#header-main .header-title--categoryView');
 
 const searchInput = document.querySelector('#searchForm input');
-const searchButton = document.querySelector('#serchForm button');
+const searchButton = document.querySelector('#searchForm button');
 
 const trendingPreviewBtn = document.querySelector('#trendingPreview button');
 

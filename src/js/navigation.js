@@ -1,3 +1,14 @@
+searchButton.addEventListener('click',()=>{
+    location.hash = '#search=';
+})
+trendingPreviewBtn.addEventListener('click', ()=>{
+    location.hash = '#trends';
+})
+headerArrow.addEventListener('click', ()=>{
+    location.hash = '#home'
+})
+
+
 window.addEventListener('DOMContentLoaded',navigator, false);//navigator-> esta función se llamará en la primera carga.
 window.addEventListener('hashchange',navigator, false);//luego el navigator->funcion que se ejecutará cada vez que cambie el hash
 
